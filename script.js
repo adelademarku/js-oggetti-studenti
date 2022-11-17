@@ -19,40 +19,40 @@ const membriTeam = [
         nome: "Wayne",
         cognome: "Barnett",
         ruolo: "Founder & CEO",
-        foto: "wayne-barnett-founder-ceo.jpg"
+        imgUrl: 'https: //github.com/adelademarku/js-oggetti-studenti/blob/main/img/angela-caroll-chief-editor.jpg'
     },
 
     {
         nome: "Angela",
         cognome: "Caroll",
         ruolo: "Chief Editor",
-        foto: "angela-caroll-chief-editor.jpg"
+        imgUrl: "angela-caroll-chief-editor.jpg"
     },
 
     {
         nome: "Walter",
         cognome: "Gordonz",
         ruolo: "Office Manager",
-        foto: "walter-gordon-office-manager.jpg"
+        imgUrl: "walter-gordon-office-manager.jpg"
     },
 
     {
         nome: "Angela",
         cognome: "Lopez",
         ruolo: "Social Media Manager",
-        foto: "angela-lopez-social-media-manager.jpg"
+        imgUrl: "angela-lopez-social-media-manager.jpg"
     },
     {
         nome: "Scott",
         cognome: "Estrada",
         ruolo: "Developer",
-        foto: "scott-estrada-developer.jpg"
+        imgUrl: "scott-estrada-developer.jpg"
     },
     {
         nome: "Barbara",
         cognome: "Ramos",
         ruolo: "Graphic Designer",
-        foto: "barbara-ramos-graphic-designer.jpg"
+        imgUrl: "barbara-ramos-graphic-designer.jpg"
     }
 ]
 
@@ -80,14 +80,14 @@ document.getElementById("stampaHtml").innerHTML = JSON.stringify(membriTeam, nul
 
 
 
-// ---------------BONUS------------------------
+// ---------------BONUS 2------------------------
 
 
 let text = '< <div class="col" >'
 for (let i = 0; i < membriTeam.length; i++) {
     let singoloMembro = membriTeam[i];
     stampaTeamMember(singoloMembro);
-    text += '<div class="card"><img src="..." class="card-img-top" alt="...">' + membriTeam[i].foto + '<div class="card-body"><h5 class="card-title">' + membriTeam[i].nome +
+    text += '<div class="card"><img src="..." class="card-img-top" alt="...">' + membriTeam[i].imgUrl + '<div class="card-body"><h5 class="card-title">' + membriTeam[i].nome +
         membriTeam[i].cognome + '</h5>' + '<p class="card-text">' +
         membriTeam[i].ruolo +  '</p></div></div>'
 
@@ -96,6 +96,22 @@ text += "</div>";
 
 
 document.getElementById("demo").innerHTML = text;
+
+
+
+
+
+//---------------------funzione per trasformare in img------------
+
+function createImage(image) { 
+    var x = document.createElement("IMG"); 
+    x.setAttribute("src", image); 
+    x.setAttribute("width", "304"); 
+    x.setAttribute("width", "228"); 
+    x.setAttribute("alt", "The Great Ocean"); 
+    document.body.appendChild(x); 
+} 
+
 
 
 
@@ -115,7 +131,7 @@ function stampaTeamMember(membriTeam) {
     nome: ${membriTeam.nome}
     cognome: ${membriTeam.cognome}
     ruolo: ${membriTeam.ruolo} 
-    foto: ${membriTeam.foto} 
+    foto: ${membriTeam.imgUrl} 
 --------------------------------------
 
         `
