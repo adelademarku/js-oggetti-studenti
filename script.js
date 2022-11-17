@@ -87,15 +87,15 @@ let text = '<div class="card" style="width: 18rem;">'
 for (let i = 0; i < membriTeam.length; i++) {
     let singoloMembro = membriTeam[i];
     stampaTeamMember(singoloMembro);
-    text += '<img  class="card-img-top" >' + membriTeam.foto + '<div class="card-body"><p class="card-text">' + membriTeam.nome +
-        membriTeam.cognome +
-        membriTeam.ruolo +  '</p></div>'
+    text += '<img  class="card-img-top" >' + membriTeam[i].foto + '<div class="card-body"><p class="card-text">' + membriTeam[i].nome +
+        membriTeam[i].cognome +
+        membriTeam[i].ruolo +  '</p></div>'
 
 }
 text += "</div>";
 
 
-cdocument.getElementById("demo").innerHTML = text;
+document.getElementById("demo").innerHTML = text;
 
 
 
