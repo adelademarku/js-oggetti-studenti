@@ -73,11 +73,19 @@ for (let i = 0; i < membriTeam.length; i++) {
 //---------------------MILESTONE 2 ----------------------
 
 //stampo su html
+/*
+let txt = "";
+for (let x in membriTeam) {
+  txt += membriTeam[x] + " ";
+};
+
+document.getElementById("stampaHtml").innerHTML = txt; 
 
 
+document.getElementById("stampaHtml").innerHTML = Object.values(membriTeam); */
 
 
-document.getElementById("stampaHtml").innerHTML = JSON.stringify(membriTeam, null, 4);
+document.getElementById("stampaHtml").innerHTML = JSON.stringify(membriTeam, null, 4); 
 
 
 
