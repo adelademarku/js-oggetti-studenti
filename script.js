@@ -72,37 +72,30 @@ for (let i = 0; i < membriTeam.length; i++) {
 
 //---------------------MILESTONE 2 ----------------------
 
-//stampo su html
-/*
-let txt = "";
-for (let x in membriTeam) {
-  txt += membriTeam[x] + " ";
-};
 
-document.getElementById("stampaHtml").innerHTML = txt; 
-
-
-document.getElementById("stampaHtml").innerHTML = Object.values(membriTeam); */
-
-
-document.getElementById("stampaHtml").innerHTML = JSON.stringify(membriTeam, null, 4); 
+document.getElementById("stampaHtml").innerHTML = JSON.stringify(membriTeam, null, 4);
 
 
 
 
 
 
-/* ---------------BONUS------------------------
+// ---------------BONUS------------------------
 
-/*  UN ALTRO MODO PER STAMPARE LE INFORMAZIONI 
-let text = '<div class="card" style="width: 18rem;">' 
-for(const membri of membriTeam){
-    stampaTeamMember(membri);
-    text +=  '<div class="card-body">' + singoloMembro+ '</div>'
 
-} 
-text += "</div>";*/
+let text = '<div class="card" style="width: 18rem;">'
+for (let i = 0; i < membriTeam.length; i++) {
+    let singoloMembro = membriTeam[i];
+    stampaTeamMember(singoloMembro);
+    text += '<img  class="card-img-top" >' + membriTeam.foto + '<div class="card-body"><p class="card-text">' + membriTeam.nome +
+        membriTeam.cognome +
+        membriTeam.ruolo +  '</p></div>'
 
+}
+text += "</div>";
+
+
+cdocument.getElementById("demo").innerHTML = text;
 
 
 
@@ -127,6 +120,7 @@ function stampaTeamMember(membriTeam) {
 
         `
     );
+    return
 }
 
 //-----------------------------------------------------------------------
