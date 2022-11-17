@@ -56,12 +56,54 @@ const membriTeam = [
 }
 ]
 
+//------------------------MILESTONE 1------------------------------
+
+//stampo su console le informazione dei singoli oggetti
+
+
+for(let i = 0; i < membriTeam.length; i++){
+    let singoloMembro = membriTeam[i];
+    stampaTeamMember(singoloMembro);} 
+
+/*  UN ALTRO MODO PER STAMPARE LE INFORMAZIONI 
+for(const membri of membriTeam){
+    stampaTeamMember(membri);
+} */
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------funzione per stampare i singoli oggetti--------------
+function stampaTeamMember(membriTeam){
+    console.log(
+        `
+-------------- team member -----------
+    nome: ${membriTeam.nome}
+    cognome: ${membriTeam.cognome}
+    ruolo: ${membriTeam.ruolo} 
+    foto: ${membriTeam.foto} 
+--------------------------------------
+
+        `
+    );
+}
+
+//-----------------------------------------------------------------------
 
 
 
