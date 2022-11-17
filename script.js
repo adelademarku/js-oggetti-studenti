@@ -83,13 +83,13 @@ document.getElementById("stampaHtml").innerHTML = JSON.stringify(membriTeam, nul
 // ---------------BONUS------------------------
 
 
-let text = '<div class="card" >'
+let text = '< <div class="col" >'
 for (let i = 0; i < membriTeam.length; i++) {
     let singoloMembro = membriTeam[i];
     stampaTeamMember(singoloMembro);
-    text += '<img src="..." class="card-img-top" alt="...">' + membriTeam[i].foto + '<div class="card-body"><h5 class="card-title">' + membriTeam[i].nome +
+    text += '<div class="card"><img src="..." class="card-img-top" alt="...">' + membriTeam[i].foto + '<div class="card-body"><h5 class="card-title">' + membriTeam[i].nome +
         membriTeam[i].cognome + '</h5>' + '<p class="card-text">' +
-        membriTeam[i].ruolo +  '</p></div>'
+        membriTeam[i].ruolo +  '</p></div></div>'
 
 }
 text += "</div>";
