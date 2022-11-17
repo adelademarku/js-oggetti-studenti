@@ -71,8 +71,7 @@ for(const membri of membriTeam){
 } */
 
 
-
-
+//---------------------MILESTONE 2 ----------------------
 
 
 
