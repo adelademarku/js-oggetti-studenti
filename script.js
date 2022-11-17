@@ -16,44 +16,44 @@ Organizzare i singoli membri in card/schede (BOOTSTRAP!) */
 
 const membriTeam = [
     {
-    nome: "Wayne",
-    cognome: "Barnett",
-    ruolo: "Founder & CEO",
-    foto: "wayne-barnett-founder-ceo.jpg"
-},
+        nome: "Wayne",
+        cognome: "Barnett",
+        ruolo: "Founder & CEO",
+        foto: "wayne-barnett-founder-ceo.jpg"
+    },
 
- {
-    nome: "Angela",
-    cognome: "Caroll",
-    ruolo: "Chief Editor",
-    foto: "angela-caroll-chief-editor.jpg"
-},
+    {
+        nome: "Angela",
+        cognome: "Caroll",
+        ruolo: "Chief Editor",
+        foto: "angela-caroll-chief-editor.jpg"
+    },
 
- {
-    nome: "Walter",
-    cognome: "Gordonz",
-    ruolo: "Office Manager",
-    foto: "walter-gordon-office-manager.jpg"
-},
+    {
+        nome: "Walter",
+        cognome: "Gordonz",
+        ruolo: "Office Manager",
+        foto: "walter-gordon-office-manager.jpg"
+    },
 
- {
-    nome: "Angela",
-    cognome: "Lopez",
-    ruolo: "Social Media Manager",
-    foto: "angela-lopez-social-media-manager.jpg"
-},
- {
-    nome: "Scott",
-    cognome: "Estrada",
-    ruolo: "Developer",
-    foto: "scott-estrada-developer.jpg"
-},
- {
-    nome: "Barbara",
-    cognome: "Ramos",
-    ruolo: "Graphic Designer",
-    foto: "barbara-ramos-graphic-designer.jpg"
-}
+    {
+        nome: "Angela",
+        cognome: "Lopez",
+        ruolo: "Social Media Manager",
+        foto: "angela-lopez-social-media-manager.jpg"
+    },
+    {
+        nome: "Scott",
+        cognome: "Estrada",
+        ruolo: "Developer",
+        foto: "scott-estrada-developer.jpg"
+    },
+    {
+        nome: "Barbara",
+        cognome: "Ramos",
+        ruolo: "Graphic Designer",
+        foto: "barbara-ramos-graphic-designer.jpg"
+    }
 ]
 
 //------------------------MILESTONE 1------------------------------
@@ -61,20 +61,39 @@ const membriTeam = [
 //stampo su console le informazione dei singoli oggetti
 
 
-for(let i = 0; i < membriTeam.length; i++){
+for (let i = 0; i < membriTeam.length; i++) {
     let singoloMembro = membriTeam[i];
-    stampaTeamMember(singoloMembro);} 
+    stampaTeamMember(singoloMembro);
+}
 
-/*  UN ALTRO MODO PER STAMPARE LE INFORMAZIONI 
-for(const membri of membriTeam){
-    stampaTeamMember(membri);
-} */
+
+
 
 
 //---------------------MILESTONE 2 ----------------------
 
+//stampo su html
 
 
+
+
+document.getElementById("stampaHtml").innerHTML = JSON.stringify(membriTeam, null, 4);
+
+
+
+
+
+
+/* ---------------BONUS------------------------
+
+/*  UN ALTRO MODO PER STAMPARE LE INFORMAZIONI 
+let text = '<div class="card" style="width: 18rem;">' 
+for(const membri of membriTeam){
+    stampaTeamMember(membri);
+    text +=  '<div class="card-body">' + singoloMembro+ '</div>'
+
+} 
+text += "</div>";*/
 
 
 
@@ -88,7 +107,7 @@ for(const membri of membriTeam){
 
 
 //--------------funzione per stampare i singoli oggetti--------------
-function stampaTeamMember(membriTeam){
+function stampaTeamMember(membriTeam) {
     console.log(
         `
 -------------- team member -----------
