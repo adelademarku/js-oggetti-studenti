@@ -71,9 +71,9 @@ for (let i = 0; i < membriTeam.length; i++) {
 
 
 //---------------------MILESTONE 2 ----------------------
+ /*
 
-
-document.getElementById("stampaHtml").innerHTML = JSON.stringify(membriTeam, null, 4);
+document.getElementById("stampaHtml").innerHTML = JSON.stringify(membriTeam, null, 4); */
 
 
 
@@ -83,12 +83,12 @@ document.getElementById("stampaHtml").innerHTML = JSON.stringify(membriTeam, nul
 // ---------------BONUS------------------------
 
 
-let text = '<div class="card" style="width: 18rem;">'
+let text = '<div class="card" >'
 for (let i = 0; i < membriTeam.length; i++) {
     let singoloMembro = membriTeam[i];
     stampaTeamMember(singoloMembro);
-    text += '<img  class="card-img-top" >' + membriTeam[i].foto + '<div class="card-body"><p class="card-text">' + membriTeam[i].nome +
-        membriTeam[i].cognome +
+    text += '<img src="..." class="card-img-top" alt="...">' + membriTeam[i].foto + '<div class="card-body"><h5 class="card-title">' + membriTeam[i].nome +
+        membriTeam[i].cognome + '</h5>' + '<p class="card-text">' +
         membriTeam[i].ruolo +  '</p></div>'
 
 }
